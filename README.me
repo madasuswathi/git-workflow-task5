@@ -1,0 +1,83 @@
+# DevOps Task
+
+## Overview
+This Task demonstrates a version-controlled DevOps workflow using Git and GitHub. It covers repository initialization, meaningful commits, branch management, pull requests, merge conflict handling, `.gitignore`, Git tags, and Markdown documentation.
+
+## Objectives
+- Maintain Task history with Git.
+- Use `main`, `dev`, and feature branches.
+- Integrate changes through GitHub Pull Requests.
+- Keep generated files and secrets out of version control.
+- Mark a stable project version using a Git tag.
+
+## Tools
+- Git
+- GitHub
+- Ubuntu/Linux terminal (Vagrant VM is suitable)
+
+## Repository structure
+devops-git-workflow/
+├── README.md
+├── .gitignore
+├── LICENSE
+├── docs/
+│   ├── git-workflow.md
+│   ├── branching-strategy.md
+│   └── commands.md
+├── scripts/
+│   ├── setup.sh
+│   └── health-check.sh
+└── logs/
+    └── .gitkeep
+
+## Getting started
+git clone https://github.com/YOUR_USERNAME/devops-git-workflow.git
+cd devops-git-workflow
+chmod +x scripts/*.sh
+./scripts/setup.sh
+./scripts/health-check.sh
+
+## Branching strategy
+- `main`: stable, reviewed project state.
+- `dev`: integration branch for completed features.
+- `feature/<name>`: short-lived branch for one change.
+
+Typical flow:
+1. Create a feature branch from `dev`.
+2. Make a focused change and commit it.
+3. Push the branch to GitHub.
+4. Open a Pull Request from the feature branch into `dev`.
+5. Review and merge the PR.
+6. Open a PR from `dev` into `main` when the work is ready for release.
+
+## Git best practices
+- Use meaningful, imperative commit messages (for example, `Add Git workflow documentation`).
+- Keep commits small and focused.
+- Never commit passwords, API keys, access tokens, or private keys.
+- Use `.gitignore` for generated and local-only files.
+- Review changes with `git status` and `git diff` before committing.
+- Use tags to identify stable versions.
+
+## Verification
+git status
+git branch -a
+git log --oneline --graph --decorate --all
+git tag
+
+
+## Deliverables
+- GitHub repository containing the project.
+- `main`, `dev`, and feature branch history.
+- Pull Requests showing branch integration.
+- `.gitignore`, documentation, and a release tag.
+
+## Screenshots to include in your submission
+1. GitHub repository home page.
+2. Branch list showing `main`, `dev`, and a feature branch (keep a feature branch if your reviewer expects to see it).
+3. Pull Request page showing merged PRs.
+4. Commit history.
+5. Tags/releases page.
+6. Terminal output of `git log --oneline --graph --decorate --all`.
+
+
+

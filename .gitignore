@@ -1,0 +1,33 @@
+# Logs
+logs/*
+!logs/.gitkeep
+*.log
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+
+# Dependencies and generated files
+node_modules/
+vendor/
+dist/
+build/
+coverage/
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
